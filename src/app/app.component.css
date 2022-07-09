@@ -1,0 +1,120 @@
+.navbar {
+    padding: 15px 0 15px 0;
+}
+
+.nav1,
+.nav2 {
+    margin-left: 20px;
+    padding-top: 3px;
+}
+
+.btn-dark {
+    border-radius: 0;
+}
+
+.d-flex {
+    width: 550px;
+    margin-left: 410px;
+}
+
+.d-flex,
+input {
+    border-radius: 0;
+}
+
+table {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.container1 {
+    display: flex;
+}
+
+.left-screen {
+    overflow-y: scroll;
+    flex: 3;
+    padding-left: 15px;
+}
+
+.right-screen {
+    flex: 1;
+}
+
+p.info {
+    margin: 10px 0 5px 25px;
+    width: 320px;
+}
+
+.desc-info {
+    background-color: #DEE2E6;
+    width: fit-content;
+    padding: 20px 35px 20px 50px;
+    margin: 15px 0 0 24px;
+}
+
+.fa-icon {
+    margin-right: 7px;
+}
+
+.fa-email {
+    cursor: pointer;
+}
+
+.fa-share,
+.fa-edit,
+.fa-delete {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.details-btn {
+    cursor: pointer;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: #0087ca;
+    cursor: pointer;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

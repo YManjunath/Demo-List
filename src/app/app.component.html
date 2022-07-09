@@ -1,0 +1,64 @@
+
+
+ <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <!-- <a class="nav-link active" aria-current="page" href="#">Saved Lists</a> -->
+          <button type="button" class="btn btn-dark"><i class="fa fa-list fa-icon" aria-hidden="true"></i>SAVED LISTS</button>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-filter fa-icon" aria-hidden="true"></i>SAVED FILTERS</a>
+        </li>
+        <li class="nav-item nav2">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-history fa-icon"  aria-hidden="true"></i>SEARCH HISTORY</a>
+        </li>
+        <li class="d-flex">
+          <input class="form-control me-6" [(ngModel)]="selectedItem" (input)="filterItems()" type="text" placeholder="Search" aria-label="Search">
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container1">
+  <div class="left-screen">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">List Name</th>
+          <th scope="col">No.of Entities</th>
+          <th scope="col">Actions</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filteredData; let i=index">
+          <td>{{ data.date }}</td>
+          <td>{{ data.listName }}</td>
+          <td>{{ data.entities }}</td>
+          <td><i class="fa fa-envelope-o fa-email" aria-hidden="true"></i>
+            <i class="fa fa-share-alt fa-share" aria-hidden="true" ></i>
+            <i class="fa fa-pencil fa-edit" aria-hidden="true" ></i>
+            <i class="fa fa-trash fa-delete" aria-hidden="true"></i>
+          </td>
+          <td class="hover-underline-animation" (click)="displayDetails(i)">Details</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="right-screen">
+    <p class="desc-info">No description yet <strong>+ Add Description</strong></p>
+    <div *ngFor="let item of details;">
+      <p class="info" *ngFor="let data of item;">{{ data.details }}</p>
+    </div>
+  </div>
+  
+</div>
